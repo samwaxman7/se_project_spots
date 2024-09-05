@@ -16,23 +16,26 @@
 
 .profile__name {
   margin: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.32;
 }
 
 .profile__subtext {
   margin: 12px 0 0;
-  width: 97px;
-  height: 16px;
+  font-size: 16px;
+  line-height: 1.16;
   color: rgba(33, 33, 33, 0.7);
+  font-weight: 500;
 }
 .profile__edit-button {
-  margin-top: auto;
+  margin: auto auto 0 0;
   text-decoration: none;
   border: none;
-  width: 107.34px;
-  height: 16px;
+  line-height: 1.16;
+  font-weight: 500;
   background-color: #fcf5e5;
   color: rgba(33, 33, 33, 0.7);
-  display: inline-block;
 }
 
 .profile__post-button {
@@ -45,4 +48,6 @@
   display: inline-block;
   font-size: 16px;
   border-radius: 12px;
+  font-weight: 500;
+  line-height: 1.16;
 }

@@ -6,6 +6,7 @@
 }
 
 .header__logo {
-  width: 94px;
-  height: 26px;
+  width: 96px;
+  height: 24px;
+  /*not sure why this happening */
 }
