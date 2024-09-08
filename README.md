@@ -12,6 +12,9 @@ This is the project spots. It is the first project using figma and creating my o
 -hover states
 ![button and hover states example](./images/demo/button_&_hover.png)
 
+**PROJECT ANALYSIS**
+https://drive.google.com/file/d/1DpCSNzpBUPBxSYE03JF5MXHe01-9w6H8/view?usp=drive_link
+
 **GITHUBB PAGE**
 
 [Link to my project on Github](https://samwaxman7.github.io/se_project_spots)
