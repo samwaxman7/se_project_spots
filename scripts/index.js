@@ -23,7 +23,12 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
+  {
+    name: "Foggy bridge",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
 ];
+
 // Profile elements
 const editModalButton = document.querySelector(".profile__edit-button");
 const cardModalButton = document.querySelector(".profile__post-button");
@@ -48,6 +53,14 @@ const cardsList = document.querySelector(".cards__list");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 
+//card preview elements
+const modalPreview = document.querySelector("#preview-modal");
+const modalPreviewCloseButton = modalPreview.querySelector(
+  ".modal__close-button_type_preview"
+);
+const modalPreviewImage = modalPreview.querySelector(".modal__image");
+const modalPreviewCaption = modalPreview.querySelector(".modal__caption");
+
 function getCardElement(data) {
   console.log(data);
   const cardElement = cardTemplate.content
@@ -56,11 +69,29 @@ function getCardElement(data) {
 
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImageEl = cardElement.querySelector(".card__image");
-
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
   cardNameEl.textContent = data.name;
   cardImageEl.setAttribute("src", data.link);
   cardImageEl.setAttribute("alt", data.name);
 
+  cardLikeButton.addEventListener("click", () => {
+    cardLikeButton.classList.toggle("card__like-button_liked");
+  });
+
+  cardDeleteButton.addEventListener("click", handleDeleteCard);
+  function handleDeleteCard(evt) {
+    evt.preventDefault();
+    const deleteCard = cardDeleteButton.closest(".card");
+    deleteCard.remove();
+  }
+
+  cardImageEl.addEventListener("click", () => {
+    openModal(modalPreview);
+    modalPreviewCaption.textContent = data.name;
+    modalPreviewImage.setAttribute("src", data.link);
+    modalPreviewImage.setAttribute("alt", data.name);
+  });
   return cardElement;
 }
 
@@ -116,3 +147,7 @@ cardModalCloseButton.addEventListener("click", () => {
 });
 
 cardFormElement.addEventListener("submit", handleAddFormSubmit);
+
+modalPreviewCloseButton.addEventListener("click", () => {
+  closeModal(modalPreview);
+});
