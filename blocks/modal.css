@@ -24,7 +24,7 @@
 
 .modal__container {
   background-color: white;
-  padding: 36px 50px 32px;
+  padding: 36px 40px 32px;
   max-width: 730px;
   position: relative;
   width: 100%;
@@ -43,6 +43,7 @@
   max-width: 80vw;
   max-height: 80vh;
   margin: 0 0 8px;
+  border-radius: 8px;
 }
 
 .modal__caption {
@@ -118,17 +119,13 @@
   line-height: 1;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 830px) {
   .modal__close-button_type_preview {
     right: -10px;
   }
 }
 
 @media screen and (max-width: 627px) {
-  .modal {
-    padding: 0 10px;
-  }
-
   .modal__container {
     padding: 12px;
   }
@@ -153,5 +150,23 @@
 
   .modal__submit-button {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modal {
+    padding: 0;
+  }
+  .modal__container {
+    padding: 0 16px;
+  }
+
+  .modal__image {
+    object-fit: cover;
+    max-width: 100%;
+  }
+  .modal__close-button_type_preview {
+    left: 235px;
+    top: -40px;
   }
 }

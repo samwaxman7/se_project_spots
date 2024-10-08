@@ -24,7 +24,7 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
   {
-    name: "Foggy bridge",
+    name: "Golden Gate bridge",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
 ];
@@ -81,9 +81,7 @@ function getCardElement(data) {
 
   cardDeleteButton.addEventListener("click", handleDeleteCard);
   function handleDeleteCard(evt) {
-    evt.preventDefault();
-    const deleteCard = cardDeleteButton.closest(".card");
-    deleteCard.remove();
+    cardElement.remove();
   }
 
   cardImageEl.addEventListener("click", () => {
@@ -123,6 +121,7 @@ function handleAddFormSubmit(evt) {
   };
   const cardElement = getCardElement(submitData);
   cardsList.prepend(cardElement);
+  evt.target.reset();
   closeModal(cardModal);
 }
 
