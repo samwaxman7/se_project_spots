@@ -102,7 +102,7 @@
   width: 156px;
   padding: 18px 0;
   border-radius: 8px;
-  background-color: #212121;
+  background-color: rgba(33, 33, 33, 1);
   color: #fcf5e5;
   border: none;
   display: inline-block;
@@ -112,13 +112,46 @@
   cursor: pointer;
 }
 
+.modal__submit-button:hover {
+  background-color: rgba(33, 33, 33, 0.8);
+}
+
+.modal__submit-button_inactive {
+  background-color: rgba(33, 33, 33, 0.4);
+}
+
+.modal__submit-button_inactive:hover {
+  background-color: rgba(33, 33, 33, 0.4);
+  cursor: default;
+}
+
 .modal__input {
   padding: 16px 12px;
   border-radius: 8px;
-  border-color: rgba(33, 33, 33, 0.4);
+  border: 1px solid rgba(33, 33, 33, 0.4);
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
+}
+
+.modal__input:hover {
+  border-color: rgba(33, 33, 33);
+}
+
+.modal__input_type_error {
+  border-color: rgba(255, 0, 0, 0.6);
+}
+
+.modal__input_type_error:hover {
+  border-color: rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+  display: block;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17.6px;
 }
 
 @media screen and (max-width: 830px) {
