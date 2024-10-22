@@ -1,13 +1,15 @@
-# Project 5: Spots
+# Project 6: Spots
 
-This is a continued version of project 3 spots. Here I have added responsivness to all of the functions on the webpage using Javascript for the first time. Some functionality that was used in Javscript is the use of variables/arrays and using these to create modals for popups. As well as creating the functionality for buttons both on the website and the popups.
+This is a continued version of project 3 & 5 spots. Here I have added Form Validation to show errors when form fields are entered incorrectly. As well as adding some eventListeners to be able to "click" off of the form and press "Escape" to both exit the form and go back to the page. While also refactoring some of the previous hardcoded code.
 
 ## Project features
 
 -Javascript/modals:
--Form functionality
-![Defining variables from html/css](./images/demo/defining-variables.png)
-![Form example](./images/demo/form-functionality.png)
+-Form Validation
+![Beginning of validation.js](./images/demo/form_validation.png)
+
+-eventListeners/hardcode refactoring
+![Shows added event listeners and refactoring](./images/demo/open_close_with_refactoring.png)
 
 **GITHUBB PAGE**
 
@@ -15,4 +17,4 @@ This is a continued version of project 3 spots. Here I have added responsivness 
 
 - **Figma**
 
-- [Link to the project on Figma] (https://www.figma.com/design/1qCS9RkiKiVquBhpOJqjZ0/Sprint-5-Project%3A-Spots?node-id=0-1&node-type=canvas&t=oPOiHECqJufxWpUF-0)
+- [Link to the project on Figma] (https://www.figma.com/design/jFtXsDr4XOyebKcgjyXN6W/Sprint-6-Project%253A-Spots)
