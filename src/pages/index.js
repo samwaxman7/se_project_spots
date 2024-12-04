@@ -1,3 +1,10 @@
+import "./index.css";
+import {
+  enableValidation,
+  settings,
+  resetValidation,
+} from "../scripts/validation.js";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -169,3 +176,5 @@ cardModalButton.addEventListener("click", () => {
 });
 
 cardFormElement.addEventListener("submit", handleAddFormSubmit);
+
+enableValidation(settings);
