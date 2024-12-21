@@ -1,5 +1,6 @@
 import "./index.css";
 import {
+  disableButton,
   enableValidation,
   settings,
   resetValidation,
@@ -79,6 +80,7 @@ const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalDescriptionInput = editModal.querySelector(
   "#profile-description-input"
 );
+const editSubmitButton = editModal.querySelector(".modal__submit-button");
 
 // Avatar form elements
 const avatarModal = document.querySelector("#avatar-modal");
@@ -211,6 +213,7 @@ function handleEditFormSubmit(evt) {
     .then((data) => {
       profileName.textContent = data.name;
       profileDescription.textContent = data.about;
+      disableButton(editSubmitButton, settings);
       closeModal(editModal);
     })
     .catch(console.error)
