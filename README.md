@@ -1,8 +1,15 @@
-# Project 6: Spots
+# Project 9: Spots
 
-This is a continued version of project 3 & 5 spots. Here I have added Form Validation to show errors when form fields are entered incorrectly. As well as adding some eventListeners to be able to "click" off of the form and press "Escape" to both exit the form and go back to the page. While also refactoring some of the previous hardcoded code.
+This is a continued version of project 3, 5 and 6 spots. These older forms of Spots have now been integrated with Wepack, Babel and API's.
 
 ## Project features
+
+-API:
+-API class creation
+![App Info function](./images/demo/API-1.png)
+
+-Api call
+![App Info call](./images/demo/API-2.png)
 
 -Javascript/modals:
 -Form Validation
